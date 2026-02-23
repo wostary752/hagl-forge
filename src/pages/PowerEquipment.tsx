@@ -96,6 +96,7 @@ export default function PowerEquipment() {
                 image={p.image}
                 description={p.description}
                 price={p.price}
+                href={`/product/${p.id}`}
               />
             ))}
           </div>

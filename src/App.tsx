@@ -9,6 +9,7 @@ import Company from "./pages/Company";
 import PowerEquipment from "./pages/PowerEquipment";
 import CardioEquipment from "./pages/CardioEquipment";
 import FunctionalTraining from "./pages/FunctionalTraining";
+import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/products/power" element={<PowerEquipment />} />
           <Route path="/products/cardio" element={<CardioEquipment />} />
           <Route path="/products/functional" element={<FunctionalTraining />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
