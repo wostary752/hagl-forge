@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-import haglLogo from "@/assets/hagl-logo.png";
 
 const productLinks = [
   { title: "Силовые тренажеры", href: "/products/power" },
@@ -25,12 +24,8 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto flex items-center justify-between h-16 md:h-20 px-4">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={haglLogo} alt="HAGL" className="h-12 md:h-14 w-auto" />
-        </Link>
-
-        {/* Desktop Nav */}
+      <div className="container mx-auto flex items-center h-16 md:h-20 px-4">
+        {/* Desktop Nav — aligned left */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((l) => (
             <Link
@@ -51,14 +46,15 @@ export default function Header() {
             onMouseLeave={() => setDropdownOpen(false)}
           >
             <button
+              onClick={() => setDropdownOpen((prev) => !prev)}
               className={`font-heading text-sm uppercase tracking-widest transition-colors hover:text-primary flex items-center gap-1 ${
                 isProductActive ? "text-primary" : "text-foreground/80"
               }`}
             >
-              Продукция <ChevronDown className="h-3 w-3" />
+              Продукция <ChevronDown className={`h-3 w-3 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
             </button>
             {dropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 w-64 bg-card border border-border rounded-lg shadow-xl py-2 z-50">
+              <div className="absolute top-full left-0 mt-2 w-64 bg-card border border-border rounded-lg shadow-xl py-2 z-[100]">
                 {productLinks.map((l) => (
                   <Link
                     key={l.href}
@@ -76,8 +72,8 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* Mobile toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
+        {/* Mobile toggle — pushed to right */}
+        <button className="md:hidden ml-auto text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
           {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
