@@ -4,7 +4,7 @@ import { Shield, Award, Wrench, Dumbbell, Heart, Zap } from "lucide-react";
 import Layout from "@/components/Layout";
 import ContactFormDialog from "@/components/ContactFormDialog";
 import heroBg from "@/assets/hero-bg.jpg";
-import rackLite from "@/assets/rack-lite-1.jpg";
+import rackLite from "@/assets/rack-lite-main.jpg";
 
 const categories = [
   { title: "Силовые тренажеры", icon: Dumbbell, description: "Рамы, скамьи, нагружаемые тренажеры", href: "/products/power" },
@@ -138,14 +138,24 @@ export default function Index() {
                 Стойка для приседаний, которая становится тихим и надёжным партнёром в ваших тренировках. 
                 Болтовая сборка позволяет собрать её в гараже или зале, а при необходимости — легко разобрать и перевезти.
               </p>
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="bg-card border border-border rounded p-3">
-                  <p className="text-xs text-muted-foreground">Размер</p>
-                  <p className="font-heading text-sm">1700×1200×2300 мм</p>
+              <div className="flex gap-6 mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-primary text-lg">📐</span>
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted-foreground">Размер</p>
+                    <p className="font-heading text-sm">1700×1200×2300 мм</p>
+                  </div>
                 </div>
-                <div className="bg-card border border-border rounded p-3">
-                  <p className="text-xs text-muted-foreground">Масса</p>
-                  <p className="font-heading text-sm">260 кг</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span className="text-primary text-lg">⚖️</span>
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted-foreground">Масса</p>
+                    <p className="font-heading text-sm">260 кг</p>
+                  </div>
                 </div>
               </div>
               <Link
