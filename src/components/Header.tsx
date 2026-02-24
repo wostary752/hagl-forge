@@ -40,18 +40,17 @@ export default function Header() {
           <img src={haglLogo} alt="HAGL" className="h-10 md:h-12 w-auto" />
         </Link>
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((l) => (
-            <Link
-              key={l.href}
-              to={l.href}
-              className={`font-heading text-sm uppercase tracking-widest transition-colors hover:text-primary ${
-                isActive(l.href) ? "text-primary" : "text-foreground/80"
-              }`}
-            >
-              {l.title}
-            </Link>
-          ))}
+          {/* Главная */}
+          <Link
+            to="/"
+            className={`font-heading text-sm uppercase tracking-widest transition-colors hover:text-primary ${
+              isActive("/") ? "text-primary" : "text-foreground/80"
+            }`}
+          >
+            Главная
+          </Link>
 
+          {/* Продукция dropdown — second */}
           <div
             className="relative"
             onMouseEnter={openDropdown}
@@ -90,6 +89,19 @@ export default function Header() {
               </div>
             )}
           </div>
+
+          {/* О нас, О компании */}
+          {navLinks.filter(l => l.href !== "/").map((l) => (
+            <Link
+              key={l.href}
+              to={l.href}
+              className={`font-heading text-sm uppercase tracking-widest transition-colors hover:text-primary ${
+                isActive(l.href) ? "text-primary" : "text-foreground/80"
+              }`}
+            >
+              {l.title}
+            </Link>
+          ))}
         </nav>
 
         <button className="md:hidden ml-auto text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
