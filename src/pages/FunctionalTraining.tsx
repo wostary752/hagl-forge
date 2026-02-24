@@ -1,12 +1,6 @@
 import { motion } from "framer-motion";
+import { Construction } from "lucide-react";
 import Layout from "@/components/Layout";
-import ProductCard from "@/components/ProductCard";
-
-const products = [
-  { id: "crossover-1", title: "HAGL CROSSOVER-700", description: "Кроссовер с двойным блоком. Регулировка высоты в 20 позициях. Вес стека 2×90 кг.", price: "По запросу" },
-  { id: "functional-1", title: "HAGL FUNCTIONAL RIG", description: "Функциональная рама для групповых тренировок. Модульная система расширения.", price: "По запросу" },
-  { id: "cable-1", title: "HAGL CABLE STATION", description: "Тросовая станция с верхним и нижним блоком. Компактное решение для любого зала.", price: "По запросу" },
-];
 
 export default function FunctionalTraining() {
   return (
@@ -23,11 +17,20 @@ export default function FunctionalTraining() {
           <p className="text-center text-muted-foreground mb-12">
             Оборудование для функциональных и групповых тренировок
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {products.map((p) => (
-              <ProductCard key={p.id} title={p.title} image="/placeholder.svg" description={p.description} price={p.price} />
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="max-w-md mx-auto text-center bg-card border border-border rounded-lg p-12"
+          >
+            <Construction className="h-16 w-16 mx-auto mb-6 text-primary" />
+            <h2 className="font-heading text-2xl uppercase tracking-wider mb-4">
+              Раздел в разработке
+            </h2>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Мы работаем над линейкой оборудования для функционального тренинга. Скоро здесь появятся кроссоверы, канатные станции и модульные рамы.
+            </p>
+          </motion.div>
         </div>
       </section>
     </Layout>

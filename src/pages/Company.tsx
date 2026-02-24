@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Factory, CheckCircle, Handshake, ShieldCheck } from "lucide-react";
+import { Factory, CheckCircle, ShieldCheck } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const standards = [
@@ -10,38 +10,21 @@ const standards = [
   "Гарантия 3 года на все конструкционные элементы",
 ];
 
-const partners = [
-  "Элитные фитнес-клубы России",
-  "Спортивные университеты и академии",
-  "Crossfit-залы и боксы",
-  "Реабилитационные центры",
-];
-
 export default function Company() {
   return (
     <Layout>
       <section className="section-padding">
         <div className="container mx-auto max-w-4xl text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="font-heading text-4xl md:text-6xl uppercase tracking-wider mb-6"
-          >
+          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="font-heading text-4xl md:text-6xl uppercase tracking-wider mb-6">
             О <span className="text-primary">компании</span>
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-muted-foreground leading-relaxed"
-          >
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-lg text-muted-foreground leading-relaxed">
             HAGL — российский производитель профессионального спортивного оборудования. 
             Мы проектируем, производим и поставляем тренажеры, соответствующие самым высоким стандартам индустрии.
           </motion.p>
         </div>
       </section>
 
-      {/* Production standards */}
       <section className="section-padding bg-card">
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
@@ -69,38 +52,15 @@ export default function Company() {
         </div>
       </section>
 
-      {/* Partners */}
       <section className="section-padding">
-        <div className="container mx-auto max-w-3xl">
-          <div className="text-center mb-12">
-            <Handshake className="h-10 w-10 text-primary mx-auto mb-4" />
-            <h2 className="font-heading text-3xl uppercase tracking-wider">
-              Наши <span className="text-primary">партнёры</span>
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {partners.map((p) => (
-              <div key={p} className="bg-card border border-border rounded-lg p-5 text-center text-sm text-muted-foreground">
-                {p}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Warranty */}
-      <section className="section-padding bg-card">
         <div className="container mx-auto max-w-3xl text-center">
           <ShieldCheck className="h-12 w-12 text-primary mx-auto mb-4" />
           <h2 className="font-heading text-3xl uppercase tracking-wider mb-6">
             Гарантийная <span className="text-primary">политика</span>
           </h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
+          <p className="text-muted-foreground leading-relaxed">
             Мы предоставляем гарантию 3 года на все конструкционные элементы тренажеров. 
             Гарантия распространяется на сварные швы, крепёжные узлы и основные рамы.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Дополнительно: пожизненная гарантия на рамные конструкции серии PRO.
           </p>
         </div>
       </section>
