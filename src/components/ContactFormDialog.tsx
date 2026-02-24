@@ -82,10 +82,17 @@ export default function ContactFormDialog({ children, defaultProduct = "" }: Con
         </DialogHeader>
 
         {submitted ? (
-          <div className="text-center py-6">
-            <div className="text-4xl mb-4">✅</div>
-            <p className="text-muted-foreground leading-relaxed">
-              Ваши данные переданы в обработку.<br />
+          <div className="text-center py-8">
+            <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-primary/10 flex items-center justify-center">
+              <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 className="font-heading text-xl uppercase tracking-wider mb-3">Заявка отправлена</h3>
+            <p className="text-muted-foreground leading-relaxed text-sm">
+              Ваши данные переданы в обработку.
+            </p>
+            <p className="text-muted-foreground leading-relaxed text-sm">
               В ближайшее время с вами свяжутся.
             </p>
             <button

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Layout from "@/components/Layout";
 import ContactFormDialog from "@/components/ContactFormDialog";
-import rackGym from "@/assets/rack-gym.jpg";
+import rackLiteMain from "@/assets/rack-lite-main.jpg";
 import rackLite1 from "@/assets/rack-lite-1.jpg";
 import rackDetail1 from "@/assets/rack-detail-1.jpg";
 import rackDetail2 from "@/assets/rack-detail-2.jpg";
@@ -24,7 +24,7 @@ const productsData: Record<string, {
 }> = {
   "rack-lite": {
     title: "RACK LITE",
-    images: [rackGym, rackLite1, rackDetail1, rackDetail2, rackDetail3, rackDetail4, rackDetail5, rackDetail6],
+    images: [rackLiteMain, rackLite1, rackDetail1, rackDetail2, rackDetail3, rackDetail4, rackDetail5, rackDetail6],
     description:
       "Стойка для приседаний, которая становится тихим и надёжным партнёром в ваших тренировках. Болтовая сборка позволяет собрать её в гараже или зале, а при необходимости — легко разобрать и перевезти. Конструкция из стали 20 обеспечивает прочность и долговечность, а ответственные элементы из стали 09Г2С гарантируют безопасность при максимальных нагрузках.",
     price: "Цена по запросу",
