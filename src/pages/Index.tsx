@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Shield, Award, Wrench, Dumbbell, Heart, Zap } from "lucide-react";
 import Layout from "@/components/Layout";
+import ContactFormDialog from "@/components/ContactFormDialog";
 import heroBg from "@/assets/hero-bg.jpg";
 import rackLite from "@/assets/rack-lite-1.jpg";
 
@@ -146,14 +147,6 @@ export default function Index() {
                   <p className="text-xs text-muted-foreground">Масса</p>
                   <p className="font-heading text-sm">260 кг</p>
                 </div>
-                <div className="bg-card border border-border rounded p-3">
-                  <p className="text-xs text-muted-foreground">Конструкция</p>
-                  <p className="font-heading text-sm">Сталь 20</p>
-                </div>
-                <div className="bg-card border border-border rounded p-3">
-                  <p className="text-xs text-muted-foreground">Отв. элементы</p>
-                  <p className="font-heading text-sm">Сталь 09Г2С</p>
-                </div>
               </div>
               <Link
                 to="/products/power"
@@ -200,12 +193,11 @@ export default function Index() {
           <p className="text-muted-foreground text-lg mb-8">
             Свяжитесь с нами для консультации или подбора оборудования для вашего зала
           </p>
-          <Link
-            to="/company"
-            className="inline-block bg-primary text-primary-foreground font-heading uppercase tracking-widest text-sm px-8 py-4 rounded hover:bg-primary/90 transition-colors"
-          >
-            Связаться с нами
-          </Link>
+          <ContactFormDialog>
+            <button className="inline-block bg-primary text-primary-foreground font-heading uppercase tracking-widest text-sm px-8 py-4 rounded hover:bg-primary/90 transition-colors">
+              Связаться с нами
+            </button>
+          </ContactFormDialog>
         </div>
       </section>
     </Layout>

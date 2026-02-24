@@ -2,10 +2,15 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Layout from "@/components/Layout";
+import ContactFormDialog from "@/components/ContactFormDialog";
+import rackGym from "@/assets/rack-gym.jpg";
 import rackLite1 from "@/assets/rack-lite-1.jpg";
-import rackLite2 from "@/assets/rack-lite-2.jpg";
-import rackLite3 from "@/assets/rack-lite-3.jpg";
-import rackLite4 from "@/assets/rack-lite-4.jpg";
+import rackDetail1 from "@/assets/rack-detail-1.jpg";
+import rackDetail2 from "@/assets/rack-detail-2.jpg";
+import rackDetail3 from "@/assets/rack-detail-3.jpg";
+import rackDetail4 from "@/assets/rack-detail-4.jpg";
+import rackDetail5 from "@/assets/rack-detail-5.jpg";
+import rackDetail6 from "@/assets/rack-detail-6.jpg";
 import { useState } from "react";
 
 const productsData: Record<string, {
@@ -19,10 +24,10 @@ const productsData: Record<string, {
 }> = {
   "rack-lite": {
     title: "RACK LITE",
-    images: [rackLite1, rackLite2, rackLite3, rackLite4],
+    images: [rackGym, rackLite1, rackDetail1, rackDetail2, rackDetail3, rackDetail4, rackDetail5, rackDetail6],
     description:
       "Стойка для приседаний, которая становится тихим и надёжным партнёром в ваших тренировках. Болтовая сборка позволяет собрать её в гараже или зале, а при необходимости — легко разобрать и перевезти. Конструкция из стали 20 обеспечивает прочность и долговечность, а ответственные элементы из стали 09Г2С гарантируют безопасность при максимальных нагрузках.",
-    price: "По запросу",
+    price: "Цена по запросу",
     specs: [
       { label: "Размер", value: "1700×1200×2300 мм" },
       { label: "Масса", value: "260 кг" },
@@ -58,7 +63,6 @@ export default function ProductDetail() {
     <Layout>
       <section className="section-padding">
         <div className="container mx-auto">
-          {/* Breadcrumb */}
           <Link
             to={product.categoryHref}
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
@@ -69,10 +73,7 @@ export default function ProductDetail() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Gallery */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-            >
+            <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}>
               <div className="overflow-hidden rounded-lg mb-4 bg-secondary">
                 <img
                   src={product.images[activeImage]}
@@ -81,7 +82,7 @@ export default function ProductDetail() {
                 />
               </div>
               <div className="grid grid-cols-4 gap-2">
-                {product.images.map((img, i) => (
+                {product.images.slice(0, 8).map((img, i) => (
                   <button
                     key={i}
                     onClick={() => setActiveImage(i)}
@@ -96,10 +97,7 @@ export default function ProductDetail() {
             </motion.div>
 
             {/* Info */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-            >
+            <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }}>
               <span className="text-primary text-sm font-heading uppercase tracking-widest">
                 {product.category}
               </span>
@@ -113,21 +111,20 @@ export default function ProductDetail() {
               {/* Specs */}
               <div className="grid grid-cols-2 gap-3 mb-8">
                 {product.specs.map((s) => (
-                  <div key={s.label} className="bg-card border border-border rounded p-3">
+                  <div key={s.label} className="bg-card border border-border rounded p-3 min-w-0">
                     <p className="text-xs text-muted-foreground">{s.label}</p>
-                    <p className="font-heading text-sm">{s.value}</p>
+                    <p className="font-heading text-sm break-words leading-tight">{s.value}</p>
                   </div>
                 ))}
               </div>
 
               <p className="font-heading text-2xl text-primary mb-6">{product.price}</p>
 
-              <Link
-                to="/company"
-                className="inline-block bg-primary text-primary-foreground font-heading uppercase tracking-widest text-sm px-8 py-4 rounded hover:bg-primary/90 transition-colors"
-              >
-                Связаться для заказа
-              </Link>
+              <ContactFormDialog defaultProduct={product.title}>
+                <button className="inline-block bg-primary text-primary-foreground font-heading uppercase tracking-widest text-sm px-8 py-4 rounded hover:bg-primary/90 transition-colors">
+                  Связаться для заказа
+                </button>
+              </ContactFormDialog>
             </motion.div>
           </div>
         </div>
