@@ -36,8 +36,8 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center h-16 md:h-20 px-4">
-        <Link to="/" className="mr-6 flex-shrink-0">
-          <img src={haglLogo} alt="HAGL" className="h-10 md:h-12 w-auto" />
+        <Link to="/" className="mr-6 flex-shrink-0 w-10 h-10 md:w-12 md:h-12 overflow-hidden rounded-full">
+          <img src={haglLogo} alt="HAGL" className="w-full h-[200%] object-cover object-top" />
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {/* Главная */}
