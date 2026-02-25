@@ -10,6 +10,8 @@ import PowerEquipment from "./pages/PowerEquipment";
 import CardioEquipment from "./pages/CardioEquipment";
 import FunctionalTraining from "./pages/FunctionalTraining";
 import ProductDetail from "./pages/ProductDetail";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import LicenseAgreement from "./pages/LicenseAgreement";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +30,8 @@ const App = () => (
           <Route path="/products/cardio" element={<CardioEquipment />} />
           <Route path="/products/functional" element={<FunctionalTraining />} />
           <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/license" element={<LicenseAgreement />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

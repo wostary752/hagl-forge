@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
@@ -26,8 +27,8 @@ export default function CookieConsent() {
           <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground text-center md:text-left">
               Этот сайт использует файлы cookie для улучшения работы. Продолжая использование сайта, вы соглашаетесь с{" "}
-              <span className="text-foreground">политикой обработки персональных данных</span> и{" "}
-              <span className="text-foreground">лицензионным соглашением</span>.
+              <Link to="/privacy" className="text-primary underline hover:text-primary/80 transition-colors">политикой обработки персональных данных</Link> и{" "}
+              <Link to="/license" className="text-primary underline hover:text-primary/80 transition-colors">лицензионным соглашением</Link>.
             </p>
             <button
               onClick={accept}
