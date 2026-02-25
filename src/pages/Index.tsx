@@ -138,24 +138,22 @@ export default function Index() {
                 Стойка для приседаний, которая становится тихим и надёжным партнёром в ваших тренировках. 
                 Болтовая сборка позволяет собрать её в гараже или зале, а при необходимости — легко разобрать и перевезти.
               </p>
-              <div className="flex gap-6 mb-8">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-primary text-lg">📐</span>
-                  </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground">Размер</p>
-                    <p className="font-heading text-sm">1700×1200×2300 мм</p>
-                  </div>
+              <div className="grid grid-cols-2 gap-4 mb-8">
+                <div className="border border-border rounded-lg p-4 text-center">
+                  <p className="text-xs text-muted-foreground mb-1">Размер</p>
+                  <p className="font-heading text-sm">1700×1200×2300 мм</p>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="text-primary text-lg">⚖️</span>
-                  </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground">Масса</p>
-                    <p className="font-heading text-sm">260 кг</p>
-                  </div>
+                <div className="border border-border rounded-lg p-4 text-center">
+                  <p className="text-xs text-muted-foreground mb-1">Масса</p>
+                  <p className="font-heading text-sm">260 кг</p>
+                </div>
+                <div className="border border-border rounded-lg p-4 text-center">
+                  <p className="text-xs text-muted-foreground mb-1">Материал</p>
+                  <p className="font-heading text-sm">Сталь 20, 09Г2С</p>
+                </div>
+                <div className="border border-border rounded-lg p-4 text-center">
+                  <p className="text-xs text-muted-foreground mb-1">Покрытие</p>
+                  <p className="font-heading text-sm">Порошковая окраска</p>
                 </div>
               </div>
               <Link

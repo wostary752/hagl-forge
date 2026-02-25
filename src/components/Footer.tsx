@@ -30,7 +30,7 @@ export default function Footer() {
           <div>
             <h4 className="font-heading text-sm uppercase tracking-widest mb-4">Контакты</h4>
             <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-              <p>info@hagl.ru</p>
+              <p>hagl.info@mail.ru</p>
               <p>+7 (981) 734-45-36</p>
               <p>+7 (921) 583-23-47</p>
               <p>Санкт-Петербург, Россия</p>
