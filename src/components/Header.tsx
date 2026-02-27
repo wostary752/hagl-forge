@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-import vikingIcon from "/viking-icon.png";
+
 
 const productLinks = [
   { title: "Силовые тренажеры", href: "/products/power" },
@@ -14,6 +14,8 @@ const navLinks = [
   { title: "О нас", href: "/about" },
   { title: "О компании", href: "/company" },
 ];
+
+const customDevLink = { title: "Персональная разработка", href: "/custom" };
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -36,8 +38,10 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center h-16 md:h-20 px-4">
-        <Link to="/" className="mr-6 flex-shrink-0 w-8 h-8 md:w-10 md:h-10">
-          <img src={vikingIcon} alt="HAGL" className="w-full h-full object-contain" />
+        <Link to="/" className="mr-6 flex-shrink-0">
+          <span className="font-heading text-2xl md:text-3xl uppercase tracking-[0.15em] text-foreground hover:text-primary transition-colors">
+            HAGL
+          </span>
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {/* Главная */}
@@ -90,6 +94,16 @@ export default function Header() {
             )}
           </div>
 
+          {/* Персональная разработка */}
+          <Link
+            to={customDevLink.href}
+            className={`font-heading text-sm uppercase tracking-widest transition-colors hover:text-primary ${
+              isActive(customDevLink.href) ? "text-primary" : "text-foreground/80"
+            }`}
+          >
+            {customDevLink.title}
+          </Link>
+
           {/* О нас, О компании */}
           {navLinks.filter(l => l.href !== "/").map((l) => (
             <Link
@@ -124,6 +138,15 @@ export default function Header() {
                 {l.title}
               </Link>
             ))}
+            <Link
+              to={customDevLink.href}
+              className={`font-heading text-sm uppercase tracking-widest py-3 border-b border-border transition-colors ${
+                isActive(customDevLink.href) ? "text-primary" : "text-foreground/80"
+              }`}
+              onClick={() => setMobileOpen(false)}
+            >
+              {customDevLink.title}
+            </Link>
             <p className="font-heading text-xs uppercase tracking-widest text-muted-foreground pt-4 pb-2">Продукция</p>
             {productLinks.map((l) => (
               <Link
