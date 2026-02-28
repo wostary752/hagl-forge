@@ -9,7 +9,7 @@ const products = [
     title: "RACK LITE",
     image: rackLite2,
     description: "Силовая рама для приседаний с болтовой сборкой. 1700×1200×2300 мм, 260 кг. Сталь 20 / 09Г2С.",
-    price: "Цена по запросу",
+    price: "94 800 ₽",
   },
 ];
 
