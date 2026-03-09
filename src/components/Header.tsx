@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-
+import vikingLogo from "@/assets/hagl-viking-logo.png";
 
 const productLinks = [
   { title: "Силовые тренажеры", href: "/products/power" },
