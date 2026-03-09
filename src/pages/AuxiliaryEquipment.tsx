@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import ProductCard from "@/components/ProductCard";
-import discRack1 from "@/assets/disc-rack-1.png";
+import discRack2 from "@/assets/disc-rack-2.png";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const discRacks = [
   {
     id: "disc-rack-8",
     title: "Стойка для дисков HGL01",
-    image: discRack1,
+    image: discRack2,
     description:
       "Сталь 3 мм, восемь держателей 50 мм. Компактная — подойдёт и залу, и дому. Порошковое покрытие сохраняет вид на годы.",
     price: "34 800 ₽",
@@ -24,8 +24,9 @@ export default function AuxiliaryEquipment() {
 
   return (
     <Layout>
-      <section className="section-padding">
-        <div className="container mx-auto">
+      <section className="section-padding relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'40\' height=\'40\' viewBox=\'0 0 40 40\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'20\' cy=\'20\' r=\'2\' fill=\'white\'/%3E%3C/svg%3E")', backgroundSize: '40px 40px' }} />
+        <div className="container mx-auto relative z-10">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -38,14 +39,14 @@ export default function AuxiliaryEquipment() {
           </p>
 
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="flex flex-wrap justify-center gap-2 mb-10 w-full h-auto p-2 bg-muted/50">
-              <TabsTrigger value="disc-racks" className="font-heading uppercase tracking-wider">
+            <TabsList className="flex flex-wrap justify-center gap-3 mb-10 w-auto h-auto p-2 bg-muted/50 rounded-lg">
+              <TabsTrigger value="disc-racks" className="font-heading uppercase tracking-wider px-6 py-3 text-sm">
                 Стойки для дисков
               </TabsTrigger>
-              <TabsTrigger value="benches" className="font-heading uppercase tracking-wider">
+              <TabsTrigger value="benches" className="font-heading uppercase tracking-wider px-6 py-3 text-sm">
                 Скамейки
               </TabsTrigger>
-              <TabsTrigger value="holders" className="font-heading uppercase tracking-wider">
+              <TabsTrigger value="holders" className="font-heading uppercase tracking-wider px-6 py-3 text-sm">
                 Держатели
               </TabsTrigger>
             </TabsList>

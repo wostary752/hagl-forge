@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-import vikingLogo from "@/assets/hagl-viking-logo.png";
+
 
 const productLinks = [
   { title: "Силовые тренажеры", href: "/products/power" },
@@ -39,8 +39,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center h-16 md:h-20 px-4">
-        <Link to="/" className="mr-6 flex-shrink-0 flex items-center gap-2">
-          <img src={vikingLogo} alt="HAGL logo" className="h-8 md:h-10 w-auto" />
+        <Link to="/" className="mr-6 flex-shrink-0">
           <span className="font-heading text-2xl md:text-3xl uppercase tracking-[0.15em] text-foreground hover:text-primary transition-colors">
             HAGL
           </span>

@@ -102,7 +102,7 @@ export default function Index() {
               >
                 <Link
                   to={cat.href}
-                  className="block bg-background border border-border rounded-lg p-8 text-center hover-lift group"
+                  className="block bg-background border border-border rounded-lg p-8 text-center hover-lift group h-full flex flex-col items-center justify-center"
                 >
                   <cat.icon className="h-12 w-12 mx-auto mb-4 text-primary transition-transform duration-300 group-hover:scale-110" />
                   <h3 className="font-heading text-xl uppercase tracking-wide mb-2">{cat.title}</h3>

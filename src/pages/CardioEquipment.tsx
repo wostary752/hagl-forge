@@ -5,8 +5,9 @@ import Layout from "@/components/Layout";
 export default function CardioEquipment() {
   return (
     <Layout>
-      <section className="section-padding">
-        <div className="container mx-auto">
+      <section className="section-padding relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'80\' height=\'80\' viewBox=\'0 0 80 80\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Ccircle cx=\'40\' cy=\'40\' r=\'20\' fill=\'none\' stroke=\'white\' stroke-width=\'1\'/%3E%3Cline x1=\'40\' y1=\'15\' x2=\'40\' y2=\'65\' stroke=\'white\' stroke-width=\'0.5\'/%3E%3C/svg%3E")', backgroundSize: '80px 80px' }} />
+        <div className="container mx-auto relative z-10">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
