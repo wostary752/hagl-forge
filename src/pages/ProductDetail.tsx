@@ -12,6 +12,9 @@ import rackDetail4 from "@/assets/rack-detail-4.jpg";
 import rackDetail5 from "@/assets/rack-detail-5.jpg";
 import rackDetail6 from "@/assets/rack-detail-6.jpg";
 import discRack1 from "@/assets/disc-rack-1.png";
+import discRack2 from "@/assets/disc-rack-2.png";
+import discRack3 from "@/assets/disc-rack-3.webp";
+import discRack4 from "@/assets/disc-rack-4.webp";
 import { useState } from "react";
 
 const productsData: Record<string, {
