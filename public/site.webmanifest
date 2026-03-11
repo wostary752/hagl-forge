@@ -1,0 +1,19 @@
+{
+  "name": "HAGL — Профессиональное спортивное оборудование",
+  "short_name": "HAGL",
+  "icons": [
+    {
+      "src": "/viking-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/viking-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#131313",
+  "background_color": "#131313",
+  "display": "standalone"
+}
