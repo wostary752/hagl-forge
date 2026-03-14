@@ -10,7 +10,7 @@ const discRacks = [
   {
     id: "disc-rack-8",
     title: "Стойка для дисков HGL01",
-    image: discRack2,
+    image: discRackNew,
     description:
       "Сталь 3 мм, восемь держателей 50 мм. Компактная — подойдёт и залу, и дому. Порошковое покрытие сохраняет вид на годы.",
     price: "34 800 ₽",
