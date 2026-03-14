@@ -5,6 +5,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 /* sync v2 */
 
 const productLinks = [
+  { title: "Весь ассортимент", href: "/catalog" },
   { title: "Силовые тренажеры", href: "/products/power" },
   { title: "Кардио тренажеры", href: "/products/cardio" },
   { title: "Функциональный тренинг", href: "/products/functional" },
