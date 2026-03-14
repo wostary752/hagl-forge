@@ -10,6 +10,7 @@ import PowerEquipment from "./pages/PowerEquipment";
 import CardioEquipment from "./pages/CardioEquipment";
 import FunctionalTraining from "./pages/FunctionalTraining";
 import AuxiliaryEquipment from "./pages/AuxiliaryEquipment";
+import Catalog from "./pages/Catalog";
 import ProductDetail from "./pages/ProductDetail";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import LicenseAgreement from "./pages/LicenseAgreement";
