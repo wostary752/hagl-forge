@@ -11,10 +11,7 @@ import rackDetail3 from "@/assets/rack-detail-3.jpg";
 import rackDetail4 from "@/assets/rack-detail-4.jpg";
 import rackDetail5 from "@/assets/rack-detail-5.jpg";
 import rackDetail6 from "@/assets/rack-detail-6.jpg";
-import discRack1 from "@/assets/disc-rack-1.png";
-import discRack2 from "@/assets/disc-rack-2.png";
-import discRack3 from "@/assets/disc-rack-3.webp";
-import discRack4 from "@/assets/disc-rack-4.webp";
+import discRackNew from "@/assets/disc-rack-new.png";
 import barbellRackEmpty from "@/assets/barbell-rack-empty.png";
 import barbellRackLoaded from "@/assets/barbell-rack-loaded.png";
 import { useState } from "react";
@@ -50,7 +47,7 @@ const productsData: Record<string, {
   },
   "disc-rack-8": {
     title: "Стойка для дисков HGL01",
-    images: [discRack2, discRack3, discRack4],
+    images: [discRackNew],
     description:
       "Выбор тех, кто ценит практичность. Каркас из стали 3 мм выдерживает до 640 кг — восемь держателей по 50 мм вместят весь набор олимпийских дисков. Компактные габариты экономят место без потери вместимости. Порошковое покрытие не боится отпечатков и коррозии. Подходит и коммерческим залам, и домашним зонам.",
     price: "34 800 ₽",

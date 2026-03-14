@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import ProductCard from "@/components/ProductCard";
-import discRack2 from "@/assets/disc-rack-2.png";
+import discRackNew from "@/assets/disc-rack-new.png";
 import barbellRackLoaded from "@/assets/barbell-rack-loaded.png";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -10,7 +10,7 @@ const discRacks = [
   {
     id: "disc-rack-8",
     title: "Стойка для дисков HGL01",
-    image: discRack2,
+    image: discRackNew,
     description:
       "Сталь 3 мм, восемь держателей 50 мм. Компактная — подойдёт и залу, и дому. Порошковое покрытие сохраняет вид на годы.",
     price: "34 800 ₽",

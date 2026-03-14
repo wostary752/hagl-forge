@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import ProductCard from "@/components/ProductCard";
 import rackLiteMain from "@/assets/rack-lite-main.jpg";
-import discRack2 from "@/assets/disc-rack-2.png";
+import discRackNew from "@/assets/disc-rack-new.png";
 import barbellRackLoaded from "@/assets/barbell-rack-loaded.png";
 import { Dumbbell, Heart, Zap, Package } from "lucide-react";
 
@@ -20,7 +20,7 @@ const allProducts = [
   {
     id: "disc-rack-8",
     title: "Стойка для дисков HGL01",
-    image: discRack2,
+    image: discRackNew,
     description: "Сталь 3 мм, восемь держателей 50 мм. Компактная — подойдёт и залу, и дому.",
     price: "34 800 ₽",
     category: "Вспомогательное оборудование",

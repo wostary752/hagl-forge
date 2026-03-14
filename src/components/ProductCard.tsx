@@ -21,11 +21,11 @@ export default function ProductCard({ title, image, description, price, href, im
       transition={{ duration: 0.5 }}
       className="group bg-card border border-border rounded-lg overflow-hidden hover-lift"
     >
-      <div className={imageNaturalSize ? "overflow-hidden" : `${imageAspect} overflow-hidden bg-secondary flex items-center justify-center`}>
+      <div className="aspect-square overflow-hidden bg-secondary flex items-center justify-center">
         <img
           src={image}
           alt={title}
-          className={imageNaturalSize ? "w-full h-auto block transition-transform duration-500 group-hover:scale-105" : `w-full h-full transition-transform duration-500 group-hover:scale-105 ${imageFit === "contain" ? "object-contain" : "object-cover"}`}
+          className={`w-full h-full transition-transform duration-500 group-hover:scale-105 ${imageFit === "contain" ? "object-contain" : "object-cover"}`}
         />
       </div>
       <div className="p-5">
