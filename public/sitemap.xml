@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://hagl-iron.ru/catalog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://hagl-iron.ru/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -29,6 +34,26 @@
     <loc>https://hagl-iron.ru/products/functional</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hagl-iron.ru/products/auxiliary</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://hagl-iron.ru/product/rack-lite</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hagl-iron.ru/product/disc-rack-8</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hagl-iron.ru/product/barbell-rack-10</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://hagl-iron.ru/custom</loc>
